@@ -1,12 +1,4 @@
-FROM centos:latest
+FROM httpd:latest
 MAINTAINER hienpham4194@gmail.com
-RUN yum update -y
-RUN yum install -y httpd \
-    unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html
-WORKDIR /var/www/html/
-RUN unzip photogenic.zip \
-    cp -rvf photogenic/* . \
-    rm -rf photogenic photogenic.zip
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+WORKDIR /usr/local/apache2/conf/
 EXPOSE 80 443
