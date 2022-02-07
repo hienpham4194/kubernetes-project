@@ -1,7 +1,8 @@
 FROM centos:latest
 MAINTAINER hienpham4194@gmail.com
+RUN yum update -y
 RUN yum install -y httpd \
-    yum install -y unzip
+    unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html
 WORKDIR /var/www/html/
 RUN unzip photogenic.zip \
