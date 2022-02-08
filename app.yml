@@ -15,7 +15,7 @@ spec:
         app: web-app
     spec:
       containers:
-      - name: webapp
+      - name: web-app
         image: hienpham4194/demopipeline
         imagePullPolicy: Always
         ports:
